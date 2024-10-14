@@ -13,6 +13,7 @@ document.getElementById("shareButton").addEventListener("click", function() {
     name.style.display = "none";
     shareBlock.style.display = "flex";
 
+   
   } else {
     element.style.transform = "rotate(0deg)";
     newForm.style.background = "white";
@@ -25,23 +26,3 @@ document.getElementById("shareButton").addEventListener("click", function() {
 });
 
 
-
-
-
-
-
-/*
-<div id="myDiv">This is a div.</div>
-<button id="toggleButton">Toggle Div</button>
-
-
-
-document.getElementById("toggleButton").addEventListener("click", function() {
-    var myDiv = document.getElementById("myDiv");
-    if (myDiv.style.display === "none") {
-        myDiv.style.display = "block";
-    } else {
-        myDiv.style.display = "none";
-    }
-});
-*/
