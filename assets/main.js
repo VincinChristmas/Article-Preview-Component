@@ -1,28 +1,34 @@
 let isRotated = false;
 
 document.getElementById("shareButton").addEventListener("click", function() {
-  var element = document.getElementById("shareButton");
-  var newForm = document.getElementById("main-footer");
-  var newFormImage = document.getElementById('main-footer__img');
-  var name = document.getElementById('main-footer__info');
-  var shareBlock = document.getElementById('main-footer__shareResult');
+  var social = document.getElementById('social');
+  var nonSocial = document.getElementById('non-social');
   if (isRotated) {
-    element.style.transform = "rotate(45deg)";
-    newForm.style.background = "hsl(217, 19%, 35%)";
-    newFormImage.style.display = "none";
-    name.style.display = "none";
-    shareBlock.style.display = "flex";
-
+    nonSocial.style.display = "none";
+    social.style.display = "flex";
+    
    
   } else {
-    element.style.transform = "rotate(0deg)";
-    newForm.style.background = "white";
-    newFormImage.style.display = "block";
-    name.style.display = "block";
-    shareBlock.style.display = "none";
-
+    social.style.display = "none";
+    nonSocial.style.display = "flex";
   }
   isRotated = !isRotated;
 });
+
+document.getElementById("shareButtonSocial").addEventListener("click", function() {
+  var social = document.getElementById('social');
+  var nonSocial = document.getElementById('non-social');
+  if (isRotated) {
+    nonSocial.style.display = "flex";
+    social.style.display = "none";
+    
+   
+  } else {
+    social.style.display = "flex";
+    nonSocial.style.display = "none";
+  }
+  isRotated = !isRotated;
+});
+
 
 

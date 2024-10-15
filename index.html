@@ -4,64 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <script defer src="assets/main.js"></script>
   <script src="https://kit.fontawesome.com/2ea07c46ef.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/main.css">
   
   <title>Frontend Mentor | Article preview component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-    <main>
-        <div class="container">
-        <section class="main-image">
-          <img src="assets/images/drawers.jpg" alt="drawers">
-        </section>
-
- <section class="main-topic">
-  <div class="main-heading">
-  <p>
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
-  </p>
-  </div>
- 
+<main>
+  <div class="container">
   
-  <div class="main-paragraph">
+  <div class="article-header__img">
+    <img src="assets/images/drawers.jpg" class="article-header__img--drawer" alt="drawers">
+  </div>
+
+  <div class="article__main">
+  <div class="article-header__header">
+    <p>Shift the overall look and feel by adding these wonderful 
+      touches to furniture in your home</p>
+  </div>
+
+  <div class="article__paragraph">
     <p>
-      Ever been in a room and felt like something was missing? Perhaps 
-      it felt slightly bare and uninviting. I’ve got some simple tips 
-      to help you make any room feel complete.
+    Ever been in a room and felt like something was missing? Perhaps 
+    it felt slightly bare and uninviting. I’ve got some simple tips 
+    to help you make any room feel complete.
     </p>
   </div>
+</div>
 
-  <div id="main-footer" class="main-footer">  
-    <img id="main-footer__img" src="assets/images/avatar-michelle.jpg" alt="avatar">
-    <p id="main-footer__info" class="main-footer__info--name">Michelle Appleton<br>
-      <span class="main-footer__info--date">28 Jun 2020</span></p>
 
-      <div id="main-footer__shareResult" class="main-footer__shareResult">
-        <p>Share</p>
-        <i class="fa-brands fa-square-facebook"></i>
-        <i class="fa-brands fa-square-twitter"></i>
-        <i class="fa-brands fa-square-pinterest"></i>
-      </div>
-
-      <div id="shareButton" class="main-footer__share">
-        <img src="assets/images/icon-share.svg" alt="share icon">
-      </div>
+<div  class="article__info">
+  
+  <div id="non-social" class="article__info--non-social">
+  <img class="article__info--avatar" src="assets/images/avatar-michelle.jpg" alt="avatar">
+  <p>Michelle Appleton<br>
+<span class="article__info--non-social-date">28 Jun 2020</span></p>
+<div id="shareButton" class="article__info-share">
+  <img class="article__info--sharebutton" src="assets/images/icon-share.svg" alt="sharebutton">
   </div>
 </div>
- </section>
 
+  <div id="social" class="article__info--social">
+<p>Share</p>
+<img src="assets/images/icon-facebook.svg" alt="facebook-logo">
+<img src="assets/images/icon-twitter.svg" alt="twitter-logo">
+<img src="assets/images/icon-pinterest.svg" alt="pininterst-logo">
+<div id="shareButtonSocial" class="article__info--social-share">
+  <img class="article__info--social-sharebutton" src="assets/images/icon-share.svg" alt="sharebutton">
+  </div>
+</div>
+
+ 
+</div>
+
+</div>
   
-    </main>
+   </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
