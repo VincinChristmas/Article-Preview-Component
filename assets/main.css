@@ -92,6 +92,14 @@ img {
   max-width: 1440px;
   background: white;
   margin-bottom: 2rem;
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+img {
+  max-width: 100%;
+    height: auto;
 }
 
 .article-header__img--drawer{
@@ -213,7 +221,20 @@ img {
 
 
 
-@media all and (max-width: 320px)  {
-  
+@media (max-width: 300px) {
+  .container {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+  }
+  .article-header__img--drawer {
+      width: 100%;
+  }
+  .article__main, .article__info {
+      margin: 0.5rem;
+  }
+  /* Adjust other elements as needed */
 }
+
+
 
