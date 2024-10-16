@@ -1,374 +1,250 @@
-/******THE CSS RESET****/
+/* Default Values */
+:root {
+  --white: #fafafc;
+  --darkGrayishBlue: hsl(217, 19%, 35%);
+  --desaturatedDarkBlue: hsl(214, 17%, 51%);
+  --grayishBlue: hsl(212, 23%, 69%);
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+  --fontSize: 13px;
+}
 
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/*
-    2. Remove default margin
-  */
-* {
-  margin: 0;
+/* Fonts */
+@font-face {
+  font-family: "Manrope";
+  src: url(fonts/Manrope-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url(fonts/Manrope-Bold.ttf);
+  font-weight: 700;
 }
 
-/*
-    Typographic tweaks!
-    3. Add accessible line-height
-    4. Improve text rendering
-  */
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-size: 13px;
-  font-family: "Manrope", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: hsl(210, 44%, 95%);
-}
-
-/*
-    5. Improve media defaults
-  */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/*
-    6. Remove built-in form typography styles
-  */
-input,
-button,
-textarea,
-select {
-  font-family: "Open-Sans", sans-serif;
-}
-
-/*
-    7. Avoid text overflows
-  */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-ul,
-li,
-img {
+  font-family: "Manrope";
+  font-size: var(--fontSize);
+  height: 100dvh;
+  width: 100dvw;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  background: var(--lightGrayishBlue);
 }
 
-/*
-    8. Create a root stacking context
-  */
-#root,
-#__next {
-  isolation: isolate;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
+/* Main Container */
 .container {
-  display: flex;
-  margin-top: 11rem;
-  max-width: 100%;
-  width: 55rem;
-  margin-bottom: 3rem;
-  background: white;
-}
-
-.article__main {
-  margin: 2rem 1.5rem 1rem 1.5rem;
-}
-
-.article-header__header {
-  margin-bottom: 1rem;
-}
-
-.article-header__header p {
-  font-weight: 700;
-    font-size: 1.3rem;
-    color: hsl(217, 19%, 35%);
-}
-
-.article__paragraph p {
-  color: hsl(214, 17%, 51%);
-  font-weight: 500;
-  line-height: 1.6rem;
-  font-size: 1rem;
-  width: 27rem;
-}
-
-.article__info {
-  display: flex;
-  
-}
-
-.article__info--non-social {
-  margin: 2rem 0 1rem 0;
-  display: flex;
+  background: var(--white);
+  width: calc(100% - 50px);
+  max-width: 350px;
+  box-sizing: border-box;
+  overflow: hidden;
   border-radius: 10px;
-} 
-
-.article__info--avatar{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-.article__info--non-social p {
-  margin-left: 1.4rem;
-  font-weight: 700;
-  color: hsl(217, 19%, 35%);
-  line-height: 1.6;
-  font-size: 1rem;
+/* THE DRAWER IMG */
+.postImg {
+  aspect-ratio: 6/4;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.article__info--non-social-date {
-  color: hsl(214, 17%, 51%);
-}
-
-.article__info--social {
-  display: none;
-  align-items: center;
-  padding: 1rem 1.5rem 1rem 1.5rem;
-  background: hsl(217, 19%, 35%);
+.postImg img {
   width: 100%;
+  transition: all 0.3s ease;
+}
+.postImg img:hover {
+  transform: scale(1.2);
 }
 
-.article__info--social p {
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-weight: 500;
-  color: hsl(212, 23%, 69%);
-  margin-right: 1.5rem;
+/* post Info */
+.postInfo {
+  padding: 20px;
+  padding-bottom: 10px;
 }
 
-.article__info--social img {
-  width: 1.5rem;
-  margin-right: 1rem;
+/* Post Title  */
+.postTitle {
+  font-size: 18px;
+  color: var(--darkGrayishBlue);
+  cursor: pointer;
 }
 
-.article__info-share {
-  margin-left: 13rem;
-  width: 40px;
+/* Post Description */
+.postDesc {
+  line-height: 1.5;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+  color: var(--desaturatedDarkBlue);
+}
+
+/* Author Info */
+.authorInfo {
+  background: inherit;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 30px;
+  background: inherit;
+  height: 60px;
+}
+
+/* Author Img */
+.authorImg {
+  max-height: 40px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+/* Author Name */
+.authorName {
+  width: 100%;
+  margin: 0 0 3px 0;
+  font-weight: 700;
+  color: var(--darkGrayishBlue);
+}
+
+/* Publish Date */
+.publishDate {
+  color: var(--desaturatedDarkBlue);
+}
+
+/* Post Share */
+.shareBtn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: var(--lightGrayishBlue);
   height: 40px;
-  background: hsl(210, 46%, 95%);
-  border-radius: 50%;
-  align-self: center;
-  padding-left: 0.734rem;
-  padding-top: 0.6rem;
-}
-
-.article__info--sharebutton{
-  width: 17px;
-  height: 17px;
-}
-
-.article__info-share:hover {
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  z-index: 3;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.article__info--social-share {
-  margin-left: 4rem;
-  width: 33px;
-  height: 33px;
-  background: white;
-  border-radius: 50%;
-  align-self: center;
-  padding-left: 0.334rem;
-  padding-top: 0.5rem;
+.shareBtn.active {
+  transform: translateY(-50%) rotate(90deg);
+  background: var(--desaturatedDarkBlue);
 }
 
-.article__info--social-sharebutton{
-  width: 16px;
-  height: 16px;
-  transform: rotate(35deg);
+/* Share Iocn */
+.shareBtn svg {
+  fill: #6e8098;
 }
 
-.article__info--social-share:hover {
-  cursor: pointer;
+.shareBtn.active svg {
+  fill: var(--white);
 }
 
+/* Share Menu */
+.shareMenu {
+  position: absolute;
+  background: var(--darkGrayishBlue);
+  bottom: -80px;
+  left: 0;
+  z-index: 2;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.shareMenu.active {
+  bottom: 0;
+  opacity: 1;
+}
 
+.shareMenu .text {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--lightGrayishBlue);
+  margin: 0 4% 0 0;
+}
+.shareMenu .icon {
+  margin: 0 3%;
+  display: grid;
+  place-items: center;
+}
 
-
-
-
-@media all and (max-width: 600px) {
+/*THE RESPONSIVE DESIGN*/
+@media screen and (min-width: 767px) {
   .container {
-    margin-top: 0;
-    max-width: 1440px;
-    background: white;
-    margin-bottom: 2rem;
     display: flex;
-      flex-direction: column;
-      width: 100%;
+    max-width: 700px;
+    overflow: visible;
   }
-  
-  img {
-    max-width: 100%;
-      height: auto;
+
+  /* Post Image */
+  .postImg {
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
   }
-  
-  .article-header__img--drawer{
-    width: 100%;
-    border-radius: 12px 12px 0 0;
-  }
-  
-  .article__main {
-    margin: 2rem 1.5rem 1rem 1.5rem;
-  }
-  
-  .article-header__header {
-    margin-bottom: 1rem;
-  }
-  
-  .article-header__header p {
-    font-weight: 700;
-      font-size: 1.3rem;
-      color: hsl(217, 19%, 35%);
-  }
-  
-  .article__paragraph p {
-    color: hsl(214, 17%, 51%);
-    font-weight: 500;
-    line-height: 1.8rem;
-    font-size: 1rem;
-    width: 19rem; 
-  }
-  
-  .article__info {
-    display: flex;
-  }
-  
-  .article__info--non-social {
-    margin: 2rem 1.5rem 1rem 2rem;
-    display: flex;
-    border-radius: 10px;
-  } 
-  
-  .article__info--avatar{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  
-  .article__info--non-social p {
-    margin-left: 1.4rem;
-    font-weight: 700;
-    color: hsl(217, 19%, 35%);
-    line-height: 1.6;
-    font-size: 1rem;
-  }
-  
-  .article__info--non-social-date {
-    color: hsl(214, 17%, 51%);
-  }
-  
-  .article__info--social {
-    display: none;
-    align-items: center;
-    padding: 1rem 1.5rem 1rem 1.5rem;
-    background: hsl(217, 19%, 35%);
+  .postImg img {
+    height: 100%;
     width: 100%;
   }
-  
-  .article__info--social p {
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-weight: 500;
-    color: hsl(212, 23%, 69%);
-    margin-right: 1.5rem;
+
+  /* Share Menu */
+  .shareMenu {
+    position: absolute;
+    right: 4%;
+    left: auto;
+    bottom: 10%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    font-size: 12px;
+    opacity: 0;
   }
-  
-  .article__info--social img {
-    width: 1.5rem;
-    margin-right: 1rem;
+
+  .shareMenu::before {
+    height: 30px;
+    width: 30px;
+    content: "";
+    display: inline-block;
+    background: var(--darkGrayishBlue);
+    z-index: -1;
+    position: absolute;
+    top: 70%;
+    left: 83%;
+    transform: rotate(45deg) translateX(-50%);
   }
-  
-  .article__info-share {
-    margin-left: 4rem;
-    width: 40px;
-    height: 40px;
-    background: hsl(210, 46%, 95%);
-    border-radius: 50%;
-    align-self: center;
-    padding-left: 0.734rem;
-    padding-top: 0.6rem;
+  .shareMenu .icon {
+    margin: 0 5%;
   }
-  
-  .article__info--sharebutton{
-    width: 17px;
-    height: 17px;
-  }
-  
-  .article__info-share:hover {
-    cursor: pointer;
-  }
-  
-  .article__info--social-share {
-    margin-left: 4rem;
-    width: 33px;
-    height: 33px;
-    background: white;
-    border-radius: 50%;
-    align-self: center;
-    padding-left: 0.334rem;
-    padding-top: 0.5rem;
-  }
-  
-  .article__info--social-sharebutton{
-    width: 16px;
+  .shareMenu .icon img {
     height: 16px;
-    transform: rotate(35deg);
   }
-  
-  .article__info--social-share:hover {
-    cursor: pointer;
+  .shareMenu.active {
+    box-sizing: border-box;
+    overflow: visible;
+    bottom: 30%;
+    right: 2%;
+    left: auto;
+    width: auto;
+    max-width: 300px;
+    border-radius: 10px;
+    height: 50px;
+    padding: 0 50px 0 20px;
+    opacity: 1;
   }
-
-}
-
-@media all and (min-width: 374px) and (max-width: 599px) {
-  .article__paragraph p {
-      width: 100%;
-}
-
-.article__info {
-  justify-content: center;
-
-}
-
-@media all and (max-width: 374px) {
-  .article__info--non-social p {
-    font-size: 0.8rem;
-  }
-}
-
-@media all and (max-width: 344px) {
-  .article__info--non-social p {
-    font-size: 0.7rem;
-  }
-
 }
