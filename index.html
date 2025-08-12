@@ -15,65 +15,64 @@
   </head>
 
   <body>
-    <!--THE MAIN CONTAINER-->
     <main class="container">
-      <!--THE DRAWER IMG-->
-      <div class="postImg">
-        <img src="assets/images/drawers.jpg" alt="drawers"/>
-      </div>
-      <!--THE MAIN INFO-->
-      <div class="postInfo">
-        <!--THE MAIN INFO HEADER-->
-        <h1 class="postTitle">
-          Shift the overall look and feel by adding these wonderful touches to
-          furniture in your home
-        </h1>
-        <!--THE PARAGRAPH DESCRIPTION-->
-        <p class="postDesc">
-          Ever been in a room and felt like something was missing? Perhaps it
-          felt slightly bare and uninviting. I've got some simple tips to help
-          you make any room feel complete.
-        </p>
-        <!--THE AUTHOR INFO-->
-        <div class="authorInfo">
-          <img
-            src="assets/images/avatar-michelle.jpg"
-            alt="Author Image"
-            class="authorImg"
-          />
-          <div>
-            <p class="authorName">Michelle Appleton</p>
-            <span class="publishDate">28 Jun 2020</span>
-          </div>
-          <!--THE POST SHARE-->
-          <div class="postShare">
-            <button class="shareBtn" type="button" title="share-button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
-                <path
-                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
-                />
-              </svg>
-            </button>
+      <article class="article-card">
+        <div class="article-image">
+          <img src="assets/images/drawers.jpg" alt="Green drawers with decorative items" class="hero-image">
+        </div>
+        
+        <div class="article-content">
+          <h1 class="article-title">
+            Shift the overall look and feel by adding these wonderful 
+            touches to furniture in your home
+          </h1>
+          
+          <p class="article-excerpt">
+            Ever been in a room and felt like something was missing? Perhaps 
+            it felt slightly bare and uninviting. I've got some simple tips 
+            to help you make any room feel complete.
+          </p>
+          
+          <div class="article-footer">
+            <div class="author-info">
+              <img src="assets/images/avatar-michelle.jpg" alt="Michelle Appleton" class="author-avatar">
+              <div class="author-details">
+                <p class="author-name">Michelle Appleton</p>
+                <p class="publish-date">28 Jun 2020</p>
+              </div>
+            </div>
+            
+            <div class="share-section">
+              <button class="share-button" id="shareButton" aria-label="Share article">
+                <img src="assets/images/icon-share.svg" alt="Share" class="share-icon">
+              </button>
+              
+              <div class="share-popup" id="sharePopup">
+                <span class="share-text">Share</span>
+                <div class="social-links">
+                  <a href="#" class="social-link" aria-label="Share on Facebook">
+                    <img src="assets/images/icon-facebook.svg" alt="Facebook">
+                  </a>
+                  <a href="#" class="social-link" aria-label="Share on Twitter">
+                    <img src="assets/images/icon-twitter.svg" alt="Twitter">
+                  </a>
+                  <a href="#" class="social-link" aria-label="Share on Pinterest">
+                    <img src="assets/images/icon-pinterest.svg" alt="Pinterest">
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <!--THE SHARE MENU-->
-      <div class="shareMenu">
-        <span class="text">Share</span>
-        <!--FACEBOOK ICON-->
-        <a class="icon" href="#"
-          ><img src="assets/images/icon-facebook.svg" alt="FaceBook Icon"
-        /></a>
-        <!--TWITTER ICON-->
-        <a class="icon" href="#"
-          ><img src="assets/images/icon-twitter.svg" alt="Twitter Icon"
-        /></a>
-        <!--THE PININTEREST ICON-->
-        <a class="icon" href="#"
-          ><img src="assets/images/icon-pinterest.svg" alt="Pinterest Icon"
-        /></a>
-      </div>
+      </article>
     </main>
+  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  
     <script src="assets/main.js"></script>
+  </body>
   </body>
 </html>
